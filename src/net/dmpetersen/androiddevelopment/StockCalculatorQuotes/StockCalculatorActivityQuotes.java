@@ -1,4 +1,4 @@
-package net.dmpetersen.androiddevelopment.StockCalculator;
+package net.dmpetersen.androiddevelopment.StockCalculatorQuotes;
 
 
 import hykwokgonzales.StockDataProviderYahoo;
@@ -147,7 +147,7 @@ public class StockCalculatorActivityQuotes extends StockCalculatorActivity{
         				bundle.putDouble("Low", stockData.getMinimum());			
         				bundle.putString("Symbol", symbol[0]);
         				Log.d("SVA", "Launching StockViewActivity!");
-        				Intent intent = new Intent("net.dmpetersen.androiddevelopment.StockCalculator.StockViewActivity");
+        				Intent intent = new Intent("net.dmpetersen.androiddevelopment.StockCalculatorQuotes.StockViewActivity");
         				intent.putExtras(bundle);
         				startActivity(intent);
         				
@@ -288,7 +288,7 @@ public class StockCalculatorActivityQuotes extends StockCalculatorActivity{
 
 	        button.setOnClickListener(new OnClickListener() {
 
-	        @Override
+	     
 
 	            public void onClick(View v) {
 
@@ -340,7 +340,7 @@ public class StockCalculatorActivityQuotes extends StockCalculatorActivity{
 
           button.setOnClickListener(new OnClickListener() {
 
-          @Override
+       
 
               public void onClick(View v) {
 

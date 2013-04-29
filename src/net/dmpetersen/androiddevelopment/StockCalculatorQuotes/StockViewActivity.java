@@ -14,7 +14,7 @@
  	limitations under the License.
 */
 
-package net.dmpetersen.androiddevelopment.StockCalculator;
+package net.dmpetersen.androiddevelopment.StockCalculatorQuotes;
 
 //package hykwokgonzales;
 
