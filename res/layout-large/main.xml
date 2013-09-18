@@ -73,14 +73,6 @@ android:text=""
 android:textSize="28dp"> 
 </TextView>
 
-<Button 
-android:text="@string/stockdetail" 
-android:id="@+id/StockDetail" 
-android:layout_width="450dp" 
-android:layout_height="100dp"
-android:textSize="20dp"
->
-</Button>
 
     
     

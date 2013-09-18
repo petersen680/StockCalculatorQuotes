@@ -19,7 +19,7 @@ public class StockCalculatorActivityQuotes extends StockCalculatorActivity{
 	
     private StockDataProviderYahoo provider = null;
 	
-	private StockData stockData;
+	private StockData stockData = new StockData();
 	
 	private String[] symbol = {""};
 	
@@ -27,7 +27,6 @@ public class StockCalculatorActivityQuotes extends StockCalculatorActivity{
     
 	private Button send;
 	
-	private Button stockDetail;
 	
 	private TextView forSymbol;
 	
@@ -52,8 +51,7 @@ public class StockCalculatorActivityQuotes extends StockCalculatorActivity{
         
         send = (Button) findViewById(R.id.Send);
         
-       
-        stockDetail = (Button) findViewById(R.id.StockDetail); 
+      
         
        
         forSymbol = (TextView) findViewById(R.id.ForSymbol);
@@ -102,9 +100,14 @@ public class StockCalculatorActivityQuotes extends StockCalculatorActivity{
         	else{
         		
         		
+        		stockData.setSymbol("xxx");
+    	 		stockData.setPrice(0.0);
+    	 		stockData.setPercentileChange(0.0);
+    	 		stockData.setMaximum(0.0);
+    	 		stockData.setMinimum(0.0);
+    	 		stockData.setName("xxx");
         		
-        		
-        		stockData = provider.getStockData();
+        		//stockData = provider.getStockData();
             
         		stringSymbol = new String(stockData.getSymbol());
             
@@ -133,42 +136,7 @@ public class StockCalculatorActivityQuotes extends StockCalculatorActivity{
     
   
   
-    stockDetail.setOnClickListener(new View.OnClickListener() {
-        public void onClick(View view) {
-        	  		Bundle bundle = new Bundle();
-        	  		
-        	  		
-        	  		if(flag == true){
-        	  	
-        				bundle.putString("SymbolName", stockData.getName());
-        				bundle.putDouble("Price", stockData.getPrice());
-        				bundle.putDouble("Change", stockData.getPercentileChange());
-        				bundle.putDouble("High", stockData.getMaximum());
-        				bundle.putDouble("Low", stockData.getMinimum());			
-        				bundle.putString("Symbol", symbol[0]);
-        				Log.d("SVA", "Launching StockViewActivity!");
-        				Intent intent = new Intent("net.dmpetersen.androiddevelopment.StockCalculatorQuotes.StockViewActivity");
-        				intent.putExtras(bundle);
-        				startActivity(intent);
-        				
-        				
-        				//flag = false;
-        				
-        				
-        				
-        	  		}
-        	  		
-        	  		//else
-        	  			
-        	  			//showError2();
-        	  			
-        	  			
-        	  		}
-        	  		
-        		
-        
-        	  });
-        	
+    
     
 	}
 	

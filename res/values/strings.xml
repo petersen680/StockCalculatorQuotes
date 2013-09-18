@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   
-    <string name="app_name">Stock Trade Calculator With Quotes</string>
+    <string name="app_name">Stock Trade Calc (Quotes)</string>
     <string name="stock_view_page">Stock Detail Page</string>
     <string name="send">Get Stock Price</string>
     <string name="stockdetail">Detail Page</string>
